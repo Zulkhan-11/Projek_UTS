@@ -33,15 +33,17 @@ class LoginController extends Controller
      *
      * @return void
      */
+
+     protected function redirectTo(){
+        return Auth::user()->role === 'dokter' ? '/dokter' : '/home';
+
+
+    }
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
         $this->middleware('auth')->only('logout');
     }
-    protected function redirectTo(){
-        return Auth::user()->role === 'dokter' ? '/dokter' : '/home';
-
-
-    }
+    
 
 }

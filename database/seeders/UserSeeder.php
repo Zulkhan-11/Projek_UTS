@@ -15,17 +15,17 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         User::create([
-            'nama' => 'Dr. Naufal Muflih',
-            'alamat' => 'Jl Pamularsih No.2',
-            'no_hp' => '081727156423',
-            'email' => 'dokter@gmail.com',
+            'nama' => 'Dr. Zulkhan',
+            'alamat' => 'Jl Bulustalan No.4',
+            'no_hp' => '085654712561',
+            'email' => 'dokterZulkhan@gmail.com',
             'role' => 'dokter',
             'password' => Hash::make('password')
         ]);
         User::create([
-            'nama' => 'Dr. Naufal Muflih',
-            'alamat' => 'Jl Pamularsih No.2',
-            'no_hp' => '081727156423',
+            'nama' => 'Dr. Zulkhan',
+            'alamat' => 'Jl Bulustalan No.4',
+            'no_hp' => '085654712561',
             'email' => 'pasien@gmail.com',
             'role' => 'pasien',
             'password' => Hash::make('password')

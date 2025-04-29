@@ -22,6 +22,16 @@
                     <p>Obat</p>
                 </a>
             </li>
+            <li class="nav-item">
+    <form action="{{ route('logout') }}" method="POST" onsubmit="return confirm('Yakin ingin logout?');">
+        @csrf
+        <button type="submit" class="nav-link btn btn-link text-left" style="color: #c2c7d0; width: 100%;">
+            <i class="nav-icon fas fa-sign-out-alt"></i>
+            <p>Logout</p>
+        </button>
+    </form>
+</li>
+
         @else
             @each('adminlte::partials.sidebar.menu-item', $adminlte->menu('sidebar'), 'item')
         @endif
